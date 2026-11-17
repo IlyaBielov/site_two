@@ -3,6 +3,19 @@
 A responsive single-page layout of a GeekHub-style news blog, built as practice for an
 HTML5 & CSS3 course (2018). Plain HTML and CSS, no build step and no JavaScript.
 
+## Screenshots
+
+<table>
+  <tr>
+    <th>Desktop (1280 px)</th>
+    <th>Phone (390 px)</th>
+  </tr>
+  <tr>
+    <td valign="top"><img src="docs/screenshots/desktop.jpg" alt="The blog page on desktop" width="600"></td>
+    <td valign="top"><img src="docs/screenshots/mobile.jpg" alt="The blog page on a phone" width="240"></td>
+  </tr>
+</table>
+
 ## What's on the page
 
 - Header with the logo and the main menu
@@ -25,7 +38,8 @@ python3 -m http.server 8000
 .
 ├── index.html     # The page
 ├── style.css      # All styles
-└── images/        # Logo, favicon, post banners, partner banners, subscribe icons
+├── images/        # Logo, favicon, post banners, partner banners, subscribe icons
+└── docs/screenshots/   # Screenshots for this README
 ```
 
 ## What it practices
