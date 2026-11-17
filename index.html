@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GeekHub — Open source</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;display=swap">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=cyrillic" rel="stylesheet">
-  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-  <title>GeekHub - "Open source"</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 
 <body>
-  <header>
-    <div class="centre-block-main content">
-      <a href="/"><img src="images/logo.png" alt="name of company" class="logo"></a>
-      <nav>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <h1 class="site-header__title">
+        <a href="index.html"><img class="logo" src="images/logo.png" alt="GeekHub" width="118" height="50"></a>
+      </h1>
+      <nav aria-label="Main">
         <ul class="menu-top">
           <li><a href="#">Journal</a></li>
           <li><a href="#">About</a></li>
@@ -25,73 +28,76 @@
       </nav>
     </div>
   </header>
-  <div class="centre-block-main content">
-    <main>
-      <article>
-        <header>
-          <img src="images/img_2.jpeg" alt="GeekHub">
-        </header>
-        <h2>Реєстрацію на восьмий сезон GeekHub завершено!</h2>
-        <p>Найближчим часом ми поінформуємо вас про дату та час вступних іспитів . Слідкуйте за оновленнями на нашій
+
+  <div class="container layout">
+    <main class="layout__main">
+      <article class="post">
+        <img class="post__image" src="images/img_2.jpeg" width="619" height="306"
+          alt="Banner: «Реєстрація на 8 сезон GeekHub закрита»">
+        <h2 class="post__title">Реєстрацію на восьмий сезон GeekHub завершено!</h2>
+        <p>Найближчим часом ми поінформуємо вас про дату та час вступних іспитів. Слідкуйте за оновленнями на нашій
           сторінці.</p>
         <p><a href="#" class="more">Continue Reading</a></p>
       </article>
-      <article>
-        <header>
-          <img src="images/img_1.jpg" alt="GeekHub">
-        </header>
-        <h2>Залишились лічені години до завершення реєстрації!</h2>
+      <article class="post">
+        <img class="post__image" src="images/img_1.jpg" width="619" height="306"
+          alt="Banner: «Реєстрація закривається через 24:00 години»">
+        <h2 class="post__title">Залишились лічені години до завершення реєстрації!</h2>
         <p>Опівночі, 23 вересня 2018 реєстраційні посилання перестануть працювати.</p>
-        <p>Якщо ти планував спробувати себе на GeekHub, твій останній шанс - ЗАРАЗ!</p>
+        <p>Якщо ти планував спробувати себе на GeekHub, твій останній шанс — ЗАРАЗ!</p>
         <p><a href="#" class="more">Continue Reading</a></p>
       </article>
     </main>
-    <aside>
-      <div class="widget">
-        <h2>Search</h2>
-        <form action="" method="GET">
-          <input type="search" name="search" class="search" placeholder="What are you looking for?">
+
+    <aside class="layout__aside">
+      <section class="widget">
+        <h2 class="widget__title" id="search-title">Search</h2>
+        <form action="#" method="get" role="search" aria-labelledby="search-title">
+          <label class="visually-hidden" for="search">Search</label>
+          <input class="field" type="search" id="search" name="search" placeholder="What are you looking for?">
         </form>
-      </div>
-      <div class="widget">
-        <h2>Courses</h2>
-        <nav>
-          <ul>
+      </section>
+      <section class="widget">
+        <h2 class="widget__title">Courses</h2>
+        <nav aria-label="Courses">
+          <ul class="widget__list">
             <li><a href="#">Frontend + JS</a></li>
             <li><a href="#">JavaScript</a></li>
             <li><a href="#">Java for WEB</a></li>
             <li><a href="#">Android</a></li>
           </ul>
         </nav>
-      </div>
-      <div class="widget">
-        <h2>Stay Tuned</h2>
-        <div class="subscribe">
-          <form action="" method="GET">
-            <input type="email" name="email" placeholder="Your Email" class="subscribe-input">
-            <input type="image" src="images/btt_em1.png" class="subscribe-buttom">
-          </form>
-        </div>
-      </div>
-      <div class="advanced-img">
-        <a href="https://www.facebook.com/geektalks.ck/" title="facebook.com/geektalks.ck"><img src="images/img_aside.png"
-            alt="GeekTalks"></a>
-        <a href="https://www.facebook.com/geeklabs.ua/" title="facebook.com/geeklabs.ua"><img src="images/img_aside_2.png"
-            alt="GeekLabs"></a>
+      </section>
+      <section class="widget">
+        <h2 class="widget__title">Stay Tuned</h2>
+        <form class="subscribe" action="#" method="post">
+          <label class="visually-hidden" for="email">Your email</label>
+          <input class="field subscribe__input" type="email" id="email" name="email" placeholder="Your Email"
+            autocomplete="email" required>
+          <button class="subscribe__button" type="submit" aria-label="Subscribe"></button>
+        </form>
+      </section>
+      <div class="partners">
+        <a href="https://www.facebook.com/geektalks.ck/" target="_blank" rel="noopener noreferrer">
+          <img src="images/img_aside.png" alt="GeekTalks on Facebook" width="280" height="130">
+        </a>
+        <a href="https://www.facebook.com/geeklabs.ua/" target="_blank" rel="noopener noreferrer">
+          <img src="images/img_aside_2.png" alt="GeekLabs on Facebook" width="280" height="130">
+        </a>
       </div>
     </aside>
-    <div class="clr">
-      <div class="pager clearfix">
-        <p class="previous-link"> <a href="#">🡰 Pevious</a></p>
-        <p class="next-link"> <a href="#">Next 🡲</a></p>
-      </div>
-    </div>
+
+    <nav class="pager" aria-label="Pages">
+      <a href="#" rel="prev">← Previous</a>
+      <a href="#" rel="next">Next →</a>
+    </nav>
   </div>
-  <footer>
-    <div class="centre-block-main content">
-      <p class="text-one">Copyright © GeekHub 2018</p>
-      <p class="text-two">м. Черкаси, вул. Юрія Іллєнка, 60</p>
-      <p class="text-three">Created by <a id="ref" href="https://www.facebook.com/MrBiela">Ilya Bielov</a></p>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>Copyright © GeekHub 2018</p>
+      <p>м. Черкаси, вул. Юрія Іллєнка, 60</p>
+      <p>Created by <a href="https://www.facebook.com/MrBiela" target="_blank" rel="noopener noreferrer">Ilya Bielov</a></p>
     </div>
   </footer>
 </body>
